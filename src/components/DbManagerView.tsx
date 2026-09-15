@@ -45,21 +45,21 @@ export const DbManagerView: React.FC<Props> = ({ salons = [], services = [], boo
   return (
     <div className="space-y-6">
       {/* Firebase Cloud Live Status Banner */}
-      <div className="bg-gradient-to-r from-amber-950/30 via-slate-900 to-emerald-950/30 border border-amber-500/30 rounded-2xl p-6">
+      <div className="bg-gradient-to-r from-amber-500/10 via-rose-500/5 to-emerald-500/10 dark:from-amber-950/30 dark:via-slate-900 dark:to-emerald-950/30 border border-rose-200 dark:border-amber-500/30 rounded-2xl p-6 shadow-xs">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-2xl shadow-lg shadow-amber-500/10 shrink-0">
+            <div className="w-14 h-14 rounded-2xl bg-amber-100 dark:bg-amber-500/10 border border-amber-300 dark:border-amber-500/30 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl shadow-sm shrink-0">
               🔥
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <h3 className="text-lg font-black text-white">Google Cloud Firestore</h3>
-                <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <h3 className="text-lg font-black text-slate-900 dark:text-white">Google Cloud Firestore</h3>
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   متصل ومفعل سحابياً
                 </span>
               </div>
-              <p className="text-xs text-slate-300 mt-1">
+              <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">
                 تم ربط مشروع تدلّلي بقاعدة بيانات سحابية مستقلة 100% خاصة بك. جميع الحجوزات والخدمات والبيانات تحفظ بأمان تام في Google Cloud.
               </p>
             </div>
@@ -69,7 +69,7 @@ export const DbManagerView: React.FC<Props> = ({ salons = [], services = [], boo
             <button
               onClick={handleSyncToFirebase}
               disabled={isSyncing}
-              className="px-4 py-2.5 bg-gradient-to-r from-amber-500 to-rose-500 hover:from-amber-400 hover:to-rose-400 text-slate-950 font-bold text-xs rounded-xl flex items-center gap-2 shadow-lg shadow-rose-500/20 transition-all disabled:opacity-50"
+              className="px-4 py-2.5 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold text-xs rounded-xl flex items-center gap-2 shadow-md shadow-rose-500/25 transition-all disabled:opacity-50 cursor-pointer"
             >
               <RefreshCw className={`w-4 h-4 ${isSyncing ? 'animate-spin' : ''}`} />
               <span>{isSyncing ? 'جارِ المزامنة السحابية...' : 'مزامنة البيانات الحالية لـ Firebase'}</span>
@@ -78,60 +78,60 @@ export const DbManagerView: React.FC<Props> = ({ salons = [], services = [], boo
         </div>
 
         {syncStatus === 'success' && (
-          <div className="mt-4 p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl text-xs text-emerald-300 flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+          <div className="mt-4 p-3 bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/20 rounded-xl text-xs text-emerald-800 dark:text-emerald-300 flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <span>تمت مزامنة جميع الصالونات والخدمات والحجوزات الحالية مع Firebase Firestore السحابية بنجاح!</span>
           </div>
         )}
       </div>
 
       {/* Snapshot and Independence Status */}
-      <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6">
+      <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800 rounded-2xl p-6 shadow-xs">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
               <Database className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-white flex items-center gap-2">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 حالة قاعدة البيانات (Convex Snapshot Export)
-                <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30">
                   ملكية تامة لك
                 </span>
               </h3>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                 تم استخراج snapshot_1789442693437927690.zip بالكامل ومزامنتها مع Google Firebase السحابي المستقل
               </p>
             </div>
           </div>
 
-          <div className="text-xs text-slate-400 bg-slate-950 px-4 py-2 rounded-xl border border-slate-800">
-            حجم الداتابيس: <strong className="text-emerald-400">112 ملف / 54 جدول</strong>
+          <div className="text-xs text-slate-600 dark:text-slate-400 bg-rose-50/50 dark:bg-slate-950 px-4 py-2 rounded-xl border border-rose-100 dark:border-slate-800">
+            حجم الداتابيس: <strong className="text-emerald-600 dark:text-emerald-400 font-bold">112 ملف / 54 جدول</strong>
           </div>
         </div>
       </div>
 
       {/* Tables breakdown */}
-      <div className="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden">
-        <div className="p-4 border-b border-slate-800 bg-slate-950/60 flex items-center justify-between">
-          <h4 className="text-sm font-bold text-slate-200">الجداول المتزامنة مع Firebase:</h4>
+      <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-xs">
+        <div className="p-4 border-b border-rose-100 dark:border-slate-800 bg-rose-50/50 dark:bg-slate-950/60 flex items-center justify-between">
+          <h4 className="text-sm font-bold text-slate-900 dark:text-slate-200">الجداول المتزامنة مع Firebase:</h4>
           <span className="text-xs text-slate-500 font-mono">Firestore Collections</span>
         </div>
 
-        <div className="divide-y divide-slate-800/60">
+        <div className="divide-y divide-rose-100 dark:divide-slate-800/60">
           {tables.map((t, idx) => (
-            <div key={idx} className="p-4 flex items-center justify-between hover:bg-slate-800/30 transition-colors">
+            <div key={idx} className="p-4 flex items-center justify-between hover:bg-rose-50/40 dark:hover:bg-slate-800/30 transition-colors">
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
                 <div>
-                  <div className="text-xs font-bold text-slate-200">{t.name}</div>
+                  <div className="text-xs font-bold text-slate-800 dark:text-slate-200">{t.name}</div>
                   <div className="text-[11px] text-slate-500 font-mono mt-0.5">{t.size}</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <span className="text-xs font-bold text-indigo-400">{t.count} سجل</span>
-                <span className="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+                <span className="text-xs font-bold text-rose-600 dark:text-rose-400">{t.count} سجل</span>
+                <span className="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/20">
                   {t.status}
                 </span>
               </div>
@@ -141,8 +141,8 @@ export const DbManagerView: React.FC<Props> = ({ salons = [], services = [], boo
       </div>
 
       {/* Security and Cloud Guarantee */}
-      <div className="p-5 bg-gradient-to-r from-blue-950/40 to-slate-900 border border-blue-500/30 rounded-2xl text-xs space-y-2 text-slate-300">
-        <div className="flex items-center gap-2 text-blue-300 font-bold text-sm">
+      <div className="p-5 bg-gradient-to-r from-rose-50/50 to-pink-50/50 dark:from-blue-950/40 dark:to-slate-900 border border-rose-200 dark:border-blue-500/30 rounded-2xl text-xs space-y-2 text-slate-700 dark:text-slate-300 shadow-xs">
+        <div className="flex items-center gap-2 text-rose-700 dark:text-blue-300 font-bold text-sm">
           <Lock className="w-4 h-4" />
           حماية أصول وبيانات منصة تدلّلي:
         </div>

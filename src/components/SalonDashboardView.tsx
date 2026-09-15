@@ -149,45 +149,45 @@ export const SalonDashboardView: React.FC<Props> = ({
   return (
     <div className="space-y-6">
       {/* Value Proposition Header Banner: Highlighting Tedallaly's 100% Free Salon Tools */}
-      <div className="bg-gradient-to-r from-rose-950/40 via-purple-950/30 to-slate-900/60 border border-rose-500/30 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-rose-50 via-pink-50 to-rose-100/60 dark:from-rose-950/40 dark:via-purple-950/30 dark:to-slate-900/60 border border-rose-200 dark:border-rose-500/30 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-rose-500/20 border border-rose-500/40 flex items-center justify-center text-rose-400 font-black text-lg shadow-inner">
+          <div className="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-500/20 border border-rose-200 dark:border-rose-500/40 flex items-center justify-center text-rose-600 dark:text-rose-400 font-black text-lg shadow-inner">
             💎
           </div>
           <div>
-            <div className="text-sm font-black text-white flex items-center gap-2">
+            <div className="text-sm font-black text-slate-900 dark:text-white flex items-center gap-2">
               <span>نظام إدارة الصالونات المتكامل — مجاني 100% مدى الحياة</span>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30">
                 بدون رسوم اشتراك
               </span>
             </div>
-            <p className="text-xs text-slate-300 mt-0.5">
+            <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
               تدلّلي وسيط تقني يمنحك كل أدوات الحسابات، الكاشير، الموظفات، والتقارير الضريبية مجاناً دون الحاجة لأي برامج مدفوعة.
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          <span className="text-xs font-mono text-rose-300 bg-rose-500/10 px-3 py-1.5 rounded-xl border border-rose-500/20 font-bold">
+          <span className="text-xs font-mono text-rose-700 dark:text-rose-300 bg-rose-100/80 dark:bg-rose-500/10 px-3 py-1.5 rounded-xl border border-rose-200 dark:border-rose-500/20 font-bold">
             27 أداة مجانية نشطة
           </span>
         </div>
       </div>
 
-      {/* Salon Top Header Info - Matching exact screenshot layout */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#121218] p-6 rounded-2xl border border-slate-800/80">
+      {/* Salon Top Header Info */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-[#121218] p-6 rounded-2xl border border-rose-100 dark:border-slate-800/80 shadow-xs">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-slate-950 border border-rose-500/30 flex items-center justify-center p-1.5 shadow-md shadow-rose-500/10 shrink-0">
+          <div className="w-12 h-12 rounded-2xl bg-rose-50 dark:bg-slate-950 border border-rose-200 dark:border-rose-500/30 flex items-center justify-center p-1.5 shadow-md shadow-rose-500/10 shrink-0">
             <TedallalyLogo size={36} />
           </div>
           <div>
             <div className="flex items-center gap-3">
-              <h2 className="text-2xl font-black text-white">{salon.salonName}</h2>
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <h2 className="text-2xl font-black text-slate-900 dark:text-white">{salon.salonName}</h2>
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20">
                 {salon.city} • SA • verified
               </span>
             </div>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
               لوحة تحكم الصالون المستقلة — إدارة حجوزاتك، خدماتك، وموظفيك مع وسيط تدلّلي المعتمد
             </p>
           </div>
@@ -197,7 +197,7 @@ export const SalonDashboardView: React.FC<Props> = ({
           {onViewPublicPage && (
             <button
               onClick={onViewPublicPage}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 rounded-xl text-xs font-bold transition-all"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-rose-50 hover:bg-rose-100 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-rose-200 dark:border-slate-700/80 rounded-xl text-xs font-bold transition-all shadow-xs"
             >
               <span>View Public Page ↗</span>
             </button>
@@ -205,9 +205,9 @@ export const SalonDashboardView: React.FC<Props> = ({
 
           <button
             onClick={handleCopyLink}
-            className="inline-flex items-center gap-2 px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 rounded-xl text-xs font-bold transition-all"
+            className="inline-flex items-center gap-2 px-3.5 py-2 bg-rose-50 hover:bg-rose-100 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-rose-200 dark:border-slate-700/80 rounded-xl text-xs font-bold transition-all shadow-xs"
           >
-            {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-rose-400" />}
+            {copied ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5 text-rose-500" />}
             <span>{copied ? 'تم النسخ!' : 'نسخ رابط الصالون'}</span>
           </button>
         </div>
@@ -215,10 +215,10 @@ export const SalonDashboardView: React.FC<Props> = ({
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Salon Sidebar Menu with all 27 tools */}
-        <div className="lg:col-span-1 bg-[#121218] border border-slate-800/80 rounded-2xl p-4 max-h-[780px] overflow-y-auto scrollbar-thin">
-          <div className="text-[11px] font-bold text-slate-400 uppercase mb-3 px-2 flex items-center justify-between">
+        <div className="lg:col-span-1 bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-4 max-h-[780px] overflow-y-auto scrollbar-thin shadow-xs">
+          <div className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase mb-3 px-2 flex items-center justify-between">
             <span>أدوات الصالون المجانية</span>
-            <span className="text-rose-400 font-bold">27 أداة (مجاني 100%)</span>
+            <span className="text-rose-600 dark:text-rose-400 font-bold">27 أداة (مجاني 100%)</span>
           </div>
           <div className="space-y-1">
             {freeServicesForSalon.map(item => (
@@ -230,8 +230,8 @@ export const SalonDashboardView: React.FC<Props> = ({
                 }}
                 className={`w-full text-right px-3 py-2 rounded-xl text-xs font-semibold flex items-center justify-between transition-all ${
                   activeMenu === item.title
-                    ? 'bg-rose-600/20 text-rose-300 border border-rose-500/30 font-bold'
-                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900/60'
+                    ? 'bg-rose-50 text-rose-700 border border-rose-200 dark:bg-rose-600/20 dark:text-rose-300 dark:border-rose-500/30 font-bold shadow-xs'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-slate-200 hover:bg-rose-50/50 dark:hover:bg-slate-900/60'
                 }`}
               >
                 <div className="flex items-center gap-2">
@@ -247,89 +247,89 @@ export const SalonDashboardView: React.FC<Props> = ({
         {/* Dynamic Content Pane based on selected Tool */}
         <div className="lg:col-span-3 space-y-6">
 
-          {/* VIEW: OVERVIEW (نظرة عامة) - Exact replica of Screenshot 1 */}
+          {/* VIEW: OVERVIEW (نظرة عامة) */}
           {activeMenu === 'نظرة عامة' && (
             <>
-              {/* 6 Metric Cards matching Screenshot 1 exactly */}
+              {/* 6 Metric Cards */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {/* 1. Today */}
-                <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-4">
-                  <div className="text-slate-400 text-xs font-medium flex items-center justify-between">
+                <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-4 shadow-xs">
+                  <div className="text-slate-500 dark:text-slate-400 text-xs font-medium flex items-center justify-between">
                     <span>Today 📅</span>
                   </div>
-                  <div className="text-2xl font-black text-rose-500 mt-1">0</div>
+                  <div className="text-2xl font-black text-rose-600 dark:text-rose-500 mt-1">0</div>
                 </div>
 
                 {/* 2. Confirmed */}
-                <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-4">
-                  <div className="text-slate-400 text-xs font-medium flex items-center justify-between">
+                <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-4 shadow-xs">
+                  <div className="text-slate-500 dark:text-slate-400 text-xs font-medium flex items-center justify-between">
                     <span>Confirmed 🕒</span>
                   </div>
-                  <div className="text-2xl font-black text-emerald-400 mt-1">
+                  <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400 mt-1">
                     {salonBookings.filter(b => b.status === 'confirmed').length}
                   </div>
                 </div>
 
                 {/* 3. Completed */}
-                <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-4">
-                  <div className="text-slate-400 text-xs font-medium flex items-center justify-between">
+                <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-4 shadow-xs">
+                  <div className="text-slate-500 dark:text-slate-400 text-xs font-medium flex items-center justify-between">
                     <span>Completed ⏱️</span>
                   </div>
-                  <div className="text-2xl font-black text-blue-400 mt-1">
+                  <div className="text-2xl font-black text-blue-600 dark:text-blue-400 mt-1">
                     {salonBookings.filter(b => b.status === 'completed').length}
                   </div>
                 </div>
 
                 {/* 4. Total Bookings */}
-                <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-4">
-                  <div className="text-slate-400 text-xs font-medium">Total Bookings ↗</div>
-                  <div className="text-2xl font-black text-white mt-1">{salonBookings.length}</div>
+                <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-4 shadow-xs">
+                  <div className="text-slate-500 dark:text-slate-400 text-xs font-medium">Total Bookings ↗</div>
+                  <div className="text-2xl font-black text-slate-900 dark:text-white mt-1">{salonBookings.length}</div>
                 </div>
 
                 {/* 5. Cancelled */}
-                <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-4">
-                  <div className="text-slate-400 text-xs font-medium">Cancelled 🗓️</div>
-                  <div className="text-2xl font-black text-slate-500 mt-1">0</div>
+                <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-4 shadow-xs">
+                  <div className="text-slate-500 dark:text-slate-400 text-xs font-medium">Cancelled 🗓️</div>
+                  <div className="text-2xl font-black text-slate-400 dark:text-slate-500 mt-1">0</div>
                 </div>
 
                 {/* 6. Gross Earnings */}
-                <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-4">
-                  <div className="text-slate-400 text-xs font-medium">Gross Earnings 💵</div>
-                  <div className="text-2xl font-black text-pink-400 mt-1">SAR 0.00</div>
+                <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-4 shadow-xs">
+                  <div className="text-slate-500 dark:text-slate-400 text-xs font-medium">Gross Earnings 💵</div>
+                  <div className="text-2xl font-black text-rose-600 dark:text-pink-400 mt-1">SAR 0.00</div>
                 </div>
               </div>
 
               {/* Verified Status Banner */}
-              <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-5 flex items-center justify-between">
+              <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-5 flex items-center justify-between shadow-xs">
                 <div className="text-right">
-                  <div className="text-sm font-black text-white flex items-center gap-2 justify-end">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <div className="text-sm font-black text-slate-900 dark:text-white flex items-center gap-2 justify-end">
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                     <span>Verified</span>
                   </div>
-                  <div className="text-xs text-slate-400 mt-1">.Your salon is live and accepting bookings</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">.Your salon is live and accepting bookings</div>
                 </div>
               </div>
 
-              {/* Recent Bookings Section (Matching Screenshot 1) */}
-              <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-5 space-y-4">
+              {/* Recent Bookings Section */}
+              <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-5 space-y-4 shadow-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-rose-400 font-bold hover:underline cursor-pointer">
+                  <span className="text-xs text-rose-600 dark:text-rose-400 font-bold hover:underline cursor-pointer">
                     → View all
                   </span>
-                  <h4 className="text-sm font-bold text-white">Recent Bookings</h4>
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white">Recent Bookings</h4>
                 </div>
 
                 {salonBookings.length > 0 ? (
-                  <div className="divide-y divide-slate-800/60">
+                  <div className="divide-y divide-rose-100 dark:divide-slate-800/60">
                     {salonBookings.map(b => (
                       <div key={b._id} className="py-3 flex items-center justify-between text-xs">
                         <div className="space-y-0.5">
-                          <div className="font-bold text-white">{b.snapshot?.serviceName || 'خدمة'}</div>
-                          <div className="text-slate-400 text-[11px]">{b.appointmentDate} • {b.appointmentTime}</div>
+                          <div className="font-bold text-slate-900 dark:text-white">{b.snapshot?.serviceName || 'خدمة'}</div>
+                          <div className="text-slate-500 dark:text-slate-400 text-[11px]">{b.appointmentDate} • {b.appointmentTime}</div>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="font-bold text-emerald-400">{b.snapshot?.totalAmount || 150} SAR</span>
-                          <span className="px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 text-[10px]">
+                          <span className="font-bold text-rose-600 dark:text-emerald-400">{b.snapshot?.totalAmount || 150} SAR</span>
+                          <span className="px-2 py-0.5 rounded-md bg-rose-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[10px] font-bold">
                             {b.status}
                           </span>
                         </div>
@@ -337,52 +337,52 @@ export const SalonDashboardView: React.FC<Props> = ({
                     ))}
                   </div>
                 ) : (
-                  <div className="text-center py-8 text-xs text-slate-500">
+                  <div className="text-center py-8 text-xs text-slate-400 dark:text-slate-500">
                     .No bookings yet
                   </div>
                 )}
               </div>
 
-              {/* Share Link Banner (as seen in Screenshot 1) */}
-              <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-5 space-y-3">
+              {/* Share Link Banner */}
+              <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-5 space-y-3 shadow-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-rose-400 cursor-pointer hover:underline flex items-center gap-1.5">
+                  <span className="text-xs text-rose-600 dark:text-rose-400 cursor-pointer hover:underline flex items-center gap-1.5">
                     مشاركة واتساب • رمز QR وخيارات المشاركة ←
                   </span>
-                  <h4 className="text-xs font-bold text-slate-200 flex items-center gap-1.5">
-                    <QrCode className="w-4 h-4 text-rose-400" />
+                  <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
+                    <QrCode className="w-4 h-4 text-rose-500" />
                     رابط صالونك للمشاركة
                   </h4>
                 </div>
 
-                <div className="flex items-center gap-2 bg-slate-950 border border-slate-800 rounded-xl p-2.5">
+                <div className="flex items-center gap-2 bg-rose-50/50 dark:bg-slate-950 border border-rose-200 dark:border-slate-800 rounded-xl p-2.5">
                   <button
                     onClick={handleCopyLink}
-                    className="p-1.5 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-white transition-colors"
+                    className="p-1.5 hover:bg-white dark:hover:bg-slate-800 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
                   >
                     <Copy className="w-4 h-4" />
                   </button>
                   <input
                     readOnly
                     value="https://tedallaly.com/ar/salons/-1787048765057"
-                    className="bg-transparent text-xs text-rose-400 flex-1 outline-none font-mono text-left dir-ltr"
+                    className="bg-transparent text-xs text-rose-600 dark:text-rose-400 flex-1 outline-none font-mono text-left dir-ltr font-bold"
                   />
                 </div>
               </div>
 
-              {/* Salon Guide Note (matching Screenshot 1) */}
-              <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-4 flex items-center justify-between text-xs text-slate-300">
+              {/* Salon Guide Note */}
+              <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-4 flex items-center justify-between text-xs text-slate-600 dark:text-slate-300 shadow-xs">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400">
+                  <div className="w-8 h-8 rounded-full bg-rose-50 dark:bg-slate-800 flex items-center justify-center text-rose-600 dark:text-slate-400 font-bold">
                     ✓
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="font-bold text-white flex items-center gap-1.5 justify-end">
+                  <div className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 justify-end">
                     <span>دليل استخدام تدلّلي للصالونات</span>
-                    <HelpCircle className="w-4 h-4 text-slate-400" />
+                    <HelpCircle className="w-4 h-4 text-rose-500 dark:text-slate-400" />
                   </div>
-                  <div className="text-[11px] text-slate-400 mt-0.5">
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
                     خطوات التسجيل، إدارة الخدمات، الحجوزات، والأسئلة الشائعة.
                   </div>
                 </div>
@@ -390,21 +390,21 @@ export const SalonDashboardView: React.FC<Props> = ({
             </>
           )}
 
-          {/* VIEW: SERVICES (الخدمات) - Matching Screenshot 2 & 3 */}
+          {/* VIEW: SERVICES (الخدمات) */}
           {activeMenu === 'الخدمات' && (
             <div className="space-y-6">
               {!isAddingService ? (
-                /* Services List (Screenshot 3) */
-                <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-6 space-y-6 min-h-[400px]">
+                /* Services List */
+                <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-6 space-y-6 min-h-[400px] shadow-xs">
                   <div className="flex items-center justify-between">
                     <button
                       onClick={() => setIsAddingService(true)}
-                      className="px-4 py-2 bg-pink-600 hover:bg-pink-500 text-white font-bold text-xs rounded-xl flex items-center gap-1.5 transition-colors shadow-md shadow-pink-600/20"
+                      className="px-4 py-2 bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs rounded-xl flex items-center gap-1.5 transition-colors shadow-md shadow-rose-600/20"
                     >
                       <span>Add Service</span>
                       <Plus className="w-4 h-4" />
                     </button>
-                    <div className="text-xs text-slate-400 font-mono">
+                    <div className="text-xs text-slate-500 dark:text-slate-400 font-mono">
                       services {salonServices.length}
                     </div>
                   </div>
@@ -414,25 +414,25 @@ export const SalonDashboardView: React.FC<Props> = ({
                       {salonServices.map(s => (
                         <div
                           key={s._id}
-                          className="p-4 bg-slate-950 border border-slate-800/80 rounded-2xl flex items-center justify-between hover:border-slate-700 transition-colors"
+                          className="p-4 bg-rose-50/40 dark:bg-slate-950 border border-rose-100 dark:border-slate-800/80 rounded-2xl flex items-center justify-between hover:border-rose-300 dark:hover:border-slate-700 transition-colors"
                         >
                           <div>
-                            <div className="font-bold text-white text-sm">{s.nameAr || s.name}</div>
-                            <div className="text-xs text-slate-400 mt-1 flex items-center gap-3">
+                            <div className="font-bold text-slate-900 dark:text-white text-sm">{s.nameAr || s.name}</div>
+                            <div className="text-xs text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-3">
                               <span>⏱️ {s.durationMins} دقيقة</span>
                               {s.categoryId && <span>🏷️ {s.categoryId}</span>}
                               {s.isHomeService && (
-                                <span className="text-rose-400">🏠 خدمة منزلية</span>
+                                <span className="text-rose-600 dark:text-rose-400 font-bold">🏠 خدمة منزلية</span>
                               )}
                             </div>
                           </div>
                           <div className="flex items-center gap-3">
-                            <span className="font-black text-pink-400 text-sm">
+                            <span className="font-black text-rose-600 dark:text-pink-400 text-sm">
                               {s.price} {s.currency}
                             </span>
                             <button
                               onClick={() => onBookService(salon, s)}
-                              className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-bold transition-colors"
+                              className="px-3 py-1.5 bg-white dark:bg-slate-800 hover:bg-rose-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-rose-200 dark:border-slate-700 rounded-xl text-xs font-bold transition-colors shadow-xs"
                             >
                               حجز تجريبي
                             </button>
@@ -442,32 +442,32 @@ export const SalonDashboardView: React.FC<Props> = ({
                     </div>
                   ) : (
                     <div className="text-center py-24 space-y-3">
-                      <div className="w-12 h-12 mx-auto rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500 text-xl">
+                      <div className="w-12 h-12 mx-auto rounded-full bg-rose-50 dark:bg-slate-900 border border-rose-200 dark:border-slate-800 flex items-center justify-center text-rose-500 dark:text-slate-500 text-xl">
                         ✂️
                       </div>
-                      <div className="text-xs text-slate-400 font-mono">
+                      <div className="text-xs text-slate-500 dark:text-slate-400 font-mono">
                         .No services yet. Add your first service
                       </div>
                     </div>
                   )}
                 </div>
               ) : (
-                /* Add Service Form (Screenshot 2) */
-                <div className="bg-[#121218] border border-slate-800/80 rounded-2xl p-6 space-y-6">
-                  <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
+                /* Add Service Form */
+                <div className="bg-white dark:bg-[#121218] border border-rose-100 dark:border-slate-800/80 rounded-2xl p-6 space-y-6 shadow-xs">
+                  <div className="flex items-center justify-between border-b border-rose-100 dark:border-slate-800/80 pb-4">
                     <button
                       onClick={() => setIsAddingService(false)}
-                      className="text-xs text-slate-400 hover:text-white flex items-center gap-1"
+                      className="text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1"
                     >
                       <span>Back ←</span>
                     </button>
-                    <h3 className="text-sm font-bold text-white">Add Service</h3>
+                    <h3 className="text-sm font-bold text-slate-900 dark:text-white">Add Service</h3>
                   </div>
 
                   <form onSubmit={handleCreateService} className="space-y-4 max-w-xl mx-auto text-right">
                     {/* Service Name */}
                     <div className="space-y-1">
-                      <label className="text-xs text-slate-400 font-mono block">
+                      <label className="text-xs text-slate-600 dark:text-slate-400 font-mono block">
                         * Service Name
                       </label>
                       <input
@@ -475,20 +475,20 @@ export const SalonDashboardView: React.FC<Props> = ({
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-slate-950 border border-pink-500 rounded-xl px-4 py-2.5 text-xs text-white outline-none focus:ring-1 focus:ring-pink-500"
+                        className="w-full bg-white dark:bg-slate-950 border border-rose-400 dark:border-pink-500 rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-rose-500/20"
                         placeholder="قص شعر"
                       />
                     </div>
 
                     {/* Category */}
                     <div className="space-y-1">
-                      <label className="text-xs text-slate-400 font-mono block">
+                      <label className="text-xs text-slate-600 dark:text-slate-400 font-mono block">
                         * Category
                       </label>
                       <select
                         value={formData.category}
                         onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-slate-300 outline-none focus:border-slate-600"
+                        className="w-full bg-white dark:bg-slate-950 border border-rose-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-slate-300 outline-none focus:border-rose-500"
                       >
                         <option value="عناية بالشعر">عناية بالشعر (Hair Care)</option>
                         <option value="مكياج وسهرات">مكياج وسهرات (Makeup)</option>
