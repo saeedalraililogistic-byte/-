@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Test collection for initial connectivity test
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+
+    // Salons catalog: publicly readable for marketplace, writable for management
+    match /salons/{salonId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Services catalog: publicly readable for marketplace, writable by salon
+    match /services/{serviceId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Bookings: readable and creatable by customers and salon
+    match /bookings/{bookingId} {
+      allow read, create, update: if true;
+    }
+  }
+}

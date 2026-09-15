@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "Salon": {
+      "title": "Salon",
+      "description": "Salon profiles on Tedallaly platform",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "salonName": { "type": "string" },
+        "city": { "type": "string" },
+        "phone": { "type": "string" },
+        "rating": { "type": "number" },
+        "reviewsCount": { "type": "number" },
+        "slug": { "type": "string" }
+      },
+      "required": ["id", "salonName", "city"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "Services offered by salons on Tedallaly",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "salonId": { "type": "string" },
+        "name": { "type": "string" },
+        "nameAr": { "type": "string" },
+        "price": { "type": "number" },
+        "currency": { "type": "string" },
+        "durationMins": { "type": "number" },
+        "isHomeService": { "type": "boolean" },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["id", "salonId", "name", "price"]
+    },
+    "Booking": {
+      "title": "Booking",
+      "description": "Customer bookings on Tedallaly brokered platform",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "salonId": { "type": "string" },
+        "serviceId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "appointmentDate": { "type": "string" },
+        "appointmentTime": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "salonId", "customerName", "customerPhone", "appointmentDate", "appointmentTime", "status"]
+    }
+  },
+  "firestore": {
+    "/salons/{salonId}": {
+      "schema": { "$ref": "#/entities/Salon" },
+      "description": "Public and verified salon entities"
+    },
+    "/services/{serviceId}": {
+      "schema": { "$ref": "#/entities/Service" },
+      "description": "Salons beauty services catalog"
+    },
+    "/bookings/{bookingId}": {
+      "schema": { "$ref": "#/entities/Booking" },
+      "description": "Customer bookings brokered through Tedallaly"
+    }
+  }
+}
